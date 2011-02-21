@@ -379,7 +379,7 @@ module Remarkable
             verb   = verb.to_s
 
             description = Remarkable.t 'remarkable.action_controller.responding',
-                                        :default => "responding to \#{{verb}} {{action}}",
+                                        :default => "responding to \#%{verb} {action}",
                                         :verb => verb.sub('!', '').upcase, :action => action
 
             send_args = [ verb, action, options ]
